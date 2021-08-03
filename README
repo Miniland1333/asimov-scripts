@@ -1,0 +1,9 @@
+1. Generate ion pairs using `a1-make_ion_pairs.sh ion-ion...`
+2. Upload ions to TSCC
+3. Use `submit_many_charges.sh ion-ion...` to submit your charge transfer check jobs to TSCC
+4. Use `submit_many.sh ion-ion...` to submit your reference energy jobs to TSCC
+5. Download ions from TSCC
+6. Collect charges using `a2-collect-charges.sh ion-ion...`
+7. Generate training sets from data using `a3-collect_ts.sh ion-ion...`. This will also generate a plot of the interaction energies.
+8. Ensure that the basis sets you are using are implemented in `../gaussian_basis_sets/` and optionally with their accompanied pseudopotential.
+9. Calculate the c6 values using `a4-calculate_c6.sh`. Note that these are ing bohr^6 * hartree and you will need to conver to angstrom^6 *kcal/mol

@@ -1,0 +1,123 @@
+Setting up Gaussian C6 for na-na
+Running gaussian 00001/
+Error: hangup
+Error: hangup
+   rax fffffffffffffffc, rbx 00007fffe977b310, rcx ffffffffffffffff
+   rdx 0000000000000000, rsp 00007fffe977b2d8, rbp 0000000000000001
+   rsi 00007fffe977b310, rdi 0000000000004442, r8  00007f9de5ebf700
+   r9  0000000000000000, r10 0000000000000000, r11 0000000000000246
+   r12 00007fffe977b330, r13 0000000000000053, r14 0000000000000000
+   r15 00007fffe9781cf0
+   rax 00000000000001c9, rbx 00007f66123ddac0, rcx 0000000000000028
+   rdx 0000000000000120, rsp 00007ffcb9290e80, rbp 00007ffcb9291290
+   rsi 00007f6612465240, rdi 00007f6612450a20, r8  00007f66123dfa00
+   r9  00007f661247c940, r10 00007f6612486580, r11 00007f661246a060
+   r12 00007f6612478ac0, r13 00007f6612465240, r14 00007f6612465240
+   r15 0000000000000004
+  --- traceback not available
+  --- traceback not available
+./a4-calculate_c6.sh: line 28: 17473 Aborted                 (core dumped) g09 < input > input.log
+Extracting c6 00001/
+STOP 1
+Running gaussian 00002/
+Extracting c6 00002/
+Running gaussian 00003/
+Extracting c6 00003/
+Running gaussian 00004/
+Extracting c6 00004/
+Running gaussian 00005/
+Extracting c6 00005/
+Running gaussian 00006/
+Extracting c6 00006/
+Running gaussian 00007/
+Extracting c6 00007/
+Running gaussian 00008/
+Extracting c6 00008/
+Running gaussian 00009/
+Extracting c6 00009/
+Running gaussian 00010/
+Extracting c6 00010/
+Running gaussian 00011/
+Extracting c6 00011/
+Setting up Gaussian C6 for na-cl
+Running gaussian 00001/
+Extracting c6 00001/
+Running gaussian 00002/
+Extracting c6 00002/
+Running gaussian 00003/
+Extracting c6 00003/
+Running gaussian 00004/
+Extracting c6 00004/
+Running gaussian 00005/
+Extracting c6 00005/
+Running gaussian 00006/
+Extracting c6 00006/
+Running gaussian 00007/
+Extracting c6 00007/
+Running gaussian 00008/
+Extracting c6 00008/
+Running gaussian 00009/
+Extracting c6 00009/
+Running gaussian 00010/
+Extracting c6 00010/
+Running gaussian 00011/
+Extracting c6 00011/
+Setting up Gaussian C6 for cl-cl
+Running gaussian 00001/
+Extracting c6 00001/
+Running gaussian 00002/
+Extracting c6 00002/
+Running gaussian 00003/
+Extracting c6 00003/
+Running gaussian 00004/
+Extracting c6 00004/
+Running gaussian 00005/
+Extracting c6 00005/
+Running gaussian 00006/
+Extracting c6 00006/
+Running gaussian 00007/
+Extracting c6 00007/
+Running gaussian 00008/
+Extracting c6 00008/
+Running gaussian 00009/
+Extracting c6 00009/
+Running gaussian 00010/
+Extracting c6 00010/
+Running gaussian 00011/
+Extracting c6 00011/
+C6 results for na-na
+na-na ./00001 'NoneType' object has no attribute 'group'
+    7 1.829066300E+01
+    8 1.825920489E+01
+    9 1.825247943E+01
+   10 1.825107053E+01
+   11 1.825074651E+01
+   12 1.825065237E+01
+   13 1.825060726E+01
+   14 1.825058087E+01
+   15 1.825056670E+01
+   16 1.825055670E+01
+C6 results for na-cl
+    6 8.490696188E+01
+    7 7.504484282E+01
+    8 6.823532022E+01
+    9 6.391762737E+01
+   10 6.349952355E+01
+   11 5.899235682E+01
+   12 5.814969622E+01
+   13 5.759457918E+01
+   14 5.717978177E+01
+   15 5.700102075E+01
+   16 5.693940115E+01
+C6 results for cl-cl
+    6 2.251072767E+02
+    7 2.235228956E+02
+    8 2.230261097E+02
+    9 2.227822991E+02
+   10 2.226586325E+02
+   11 2.226610650E+02
+   12 2.226694666E+02
+   13 2.226162382E+02
+   14 2.225614117E+02
+   15 2.225385647E+02
+   16 2.225287957E+02

@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#PBS -N XXXXXX
+#PBS -q glean
+#PBS -l walltime=01:00:00,nodes=1:ppn=16
+#PBS -e stderr 
+#PBS -o stdout 
+##PBS -m abe
+##PBS -m ae
+#PBS -m n 
+#PBS -V
+
+
+#### CHANGE
+# SCRATCHDIR="/oasis/tscc/scratch/hagnew/nacl/$PBS_JOBID"
+SCRATCHDIR="$TMPDIR/$PBS_JOBID"
+MOLPRO_HOME='/home/hagnew/software/molpro_2020.2'
+
+cd $PBS_O_WORKDIR
+
+NPRCS=`wc -l < $PBS_NODEFILE`
+
+WV_DIR='/dev/null'
+
+START_TIME=`date`
+echo The calculation started at: ${START_TIME}...
+
+        "${MOLPRO_HOME}/bin/molpro"     -W "${WV_DIR}" \
+                                        -m 1024M \
+                                        -n "${NPRCS}" \
+                                        -d "${SCRATCHDIR}" \
+                                        input
+END_TIME=`date`
+rm -rf $SCRATCHDIR
+echo The calculation ended at: ${END_TIME}...

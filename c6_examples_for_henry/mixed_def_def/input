@@ -1,0 +1,23 @@
+%nprocshared=8
+%mem=4GB
+%chk=tmp.chk
+#p hf/aug-cc-pv5z scf(xqc,MaxCycle=120)
+
+Initial guess
+
+-2 1
+Cl   0.00000000   0.00000000    0.00000000
+Cl  0.00000000   0.00000000   12.00000000
+
+--Link1--
+%nprocshared=8
+%mem=4GB
+%chk=tmp.chk
+# lc-wpbe/aug-cc-pv5z output=wfx scf(xqc,MaxCycle=150) geom=check guess=(read) 
+
+postg calculation
+
+-2 1
+
+input.wfx
+
