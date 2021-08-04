@@ -10,7 +10,7 @@ if [ $1 = "-r" ]; then
 fi
 
 if [ $# -eq 0 ]; then
-    echo -e "Usage: $0 [-r] ion-ion...\n\t-r reuses previous calculations"
+    echo -e "Usage: $0 [-r] ion-ion [ion-ion ...]\n\t-r reuses previous calculations"
     exit 1
 fi
 trap "kill 0" EXIT

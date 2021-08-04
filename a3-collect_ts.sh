@@ -4,7 +4,7 @@
 # author: Henry Agnew 5/17/2021
 
 if [ $# -eq 0 ]; then
-    echo "Usage: $0 ion-ion..."
+    echo "Usage: $0 ion-ion [ion-ion ...]"
     exit 1
 fi
 here=$(pwd)
