@@ -27,3 +27,5 @@ for ionpair in $@; do
 
     cd $here
 done
+
+python3 ./p1-plot_fitting.py $@

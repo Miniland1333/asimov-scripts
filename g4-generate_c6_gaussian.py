@@ -79,7 +79,7 @@ for i in range(6, 17):
         basis_implementations = "\n" + "\n".join(implementations) + "\n"
 
     if(len(pseudopotentials)): # format pseudopotentials
-        basis_implementations += "\n\n" + "\n".join(pseudopotentials) + "\n"
+        basis_implementations += "\n" + "\n".join(pseudopotentials) + "\n"
 
     # begin writting the output file
     TEMPLATE = f"""%nprocshared=4

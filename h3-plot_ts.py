@@ -29,7 +29,7 @@ for xyz in xyzs:
         plt.plot(distances,energies, label=xyz["pair"])
         #plt.axvline(x=sigma, color='g', linestyle='dashed', label='sigma = 0.3580nm')
 
-# plt.axis([0.01* sigma,6 * sigma,-90,5])
+# plt.axis([None, None, -5, 15])
 plt.legend(loc='upper right')
 plt.grid()
 # plt.show()

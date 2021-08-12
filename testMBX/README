@@ -1,11 +1,11 @@
 1. Go to `2b_ion-ion/notebook` directory
 2. Run `python3 ../../scripts/m1-implement_potential.py ion-ion`. This will add the potential into MBX-temp.
-3. Check in ~/codes/MBX-temp/src/potentials/ and verify that your potential has been added into /2b, /buckingham, and /dispersion.
+3. Check in ~/software/MBX-temp/src/potentials/ and verify that your potential has been added into /2b, /buckingham, and /dispersion.
 4. Run `module load gcc`
-5. Go to `~/codes/MBX-temp/build` and run `make install`. This will recompile MBX.
+5. Go to `~/software/MBX-temp/build` and run `make install`. This will recompile MBX.
 6. Go to your testMBX folder
 7. Modify input.xyz with the first configuration from your training set.
 8. Modify mbx.json and ttm.json with your ion-ion pair
-9. Run `python3 ~/codes/MBX-tmp/scripts/format_conversion/xyz2nrg.py input.xyz`
-10. Run `~/codes/MBX-tmp/install/bin/tests/test_single_point input.nrg mbx.json` and confirm that its energy matches the first item in `2b_ion-ion/notebook/mb-nrg_fits_overTTM/best_fit/individual_terms.dat`
-11. Run `~/codes/MBX-tmp/install/bin/tests/test_single_point input.nrg ttm.json` and confirm that its energy matches the first item in `2b_ion-ion/notebook/ttm-nrg_fits/best_fit/individual_terms.dat`
+9. Run `python3 ~/software/MBX-tmp/scripts/format_conversion/xyz2nrg.py input.xyz`
+10. Run `~/software/MBX-tmp/install/bin/tests/test_single_point input.nrg mbx.json` and confirm that its energy matches the first item in `2b_ion-ion/notebook/mb-nrg_fits_overTTM/best_fit/individual_terms.dat`
+11. Run `~/software/MBX-tmp/install/bin/tests/test_single_point input.nrg ttm.json` and confirm that its energy matches the first item in `2b_ion-ion/notebook/ttm-nrg_fits/best_fit/individual_terms.dat`

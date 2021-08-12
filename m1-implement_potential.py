@@ -7,7 +7,7 @@ ionPair = sys.argv[1]
 mon_ids = ionPair.split("-")
 
 mbnrg_fits_directory = "mb-nrg_fits_overTTM"
-MBX_path = "/home/hagnew/codes/MBX-tmp"
+MBX_path = "/home/hagnew/software/MBX-tmp"
 
 mbfit.generate_MBX_files(dim_settings, config, mon_ids, 0,
                                      do_ttmnrg=True,
