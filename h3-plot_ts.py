@@ -16,7 +16,7 @@ natoms = 2
 
 plt.figure(dpi=300)
 plt.title('Ion-Ion')
-plt.xlabel('Distance (Angstorms)', color='#1C2833')
+plt.xlabel('Distance (Angstroms)', color='#1C2833')
 plt.ylabel('Interaction Energy (kcal/mol)', color='#1C2833')
 plt.axhline(y=0, color='b', linestyle='dashed')
 for xyz in xyzs:

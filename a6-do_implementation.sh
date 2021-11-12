@@ -12,7 +12,7 @@ trap "kill 0" EXIT
 ionpair=$1
 scriptsDir=$(pwd)
 ionDir=~/projects/ion-ion/2b_${ionpair}
-MBX_Dir=~/software/MBX-tmp
+MBX_Dir=~/software/ion-ion_MBX/MBX-tmp
 
 # add potential into MBX
 module load gcc

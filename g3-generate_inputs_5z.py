@@ -6,6 +6,7 @@ import json
 
 if(len(sys.argv) != 2):
     print("Usage: ./g3_generate_inputs.py ionpair")
+    exit()
 
 # retrieves ion data from ion-pairs.json
 with open("../../ion-pairs.json", "r") as read_file:
