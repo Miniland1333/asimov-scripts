@@ -19,8 +19,9 @@ here=$(pwd)
 
 for ionpair in $@; do
     cd ../2b_${ionpair}/notebook
+    echo "$ionpair"
     echo "REMOVING OLD FITS!"
-    rm -r ttm-nrg_fits/ mb-nrg_fits/
+    rm -r ttm-nrg_fits/ mb-nrg_fits/ mb-nrg_fits_overTTM
     # convert jupyter notebook into python script and run it for each ion pair
     jupyter nbconvert --to python 2b_${ionpair}_fitting.ipynb
     python3 2b_${ionpair}_fitting.py
