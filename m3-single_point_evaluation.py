@@ -11,20 +11,20 @@ with open("single_point_test_overTTM_MBX.txt") as file:
     overTTM_MBX = file.read()
 
 def parse_fit_output(input):
-    match = re.search(r" +1 +\d\.\d+e[+-]\d+ +(\d\.\d+e[+-]\d+)", input)
+    match = re.search(r" +1 +\d\.\d+e[+-]\d+ +(\d\.\d+e[+-]\d+)", input) # find calculated value
     return float(match.group(1))
 def parse_MBX_output(input):
     return float(input.split("Energy= ")[1])
 
-epsilon = 0.001 # kcal/mol
+epsilon = 0.002 # kcal/mol
 TTM = parse_fit_output(TTM)
 TTM_MBX = parse_MBX_output(TTM_MBX)
 overTTM = parse_fit_output(overTTM)
 overTTM_MBX = parse_MBX_output(overTTM_MBX)
-# print(TTM)
-# print(TTM_MBX)
-# print(overTTM)
-# print(overTTM_MBX)
+print(TTM)
+print(TTM_MBX)
+print(overTTM)
+print(overTTM_MBX)
 
 TTM_OK = abs(TTM-TTM_MBX) < epsilon
 overTTM_OK = abs(overTTM-overTTM_MBX) < epsilon
