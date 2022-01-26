@@ -11,5 +11,7 @@
 9. Ensure that the basis sets you are using are implemented in `../gaussian_basis_sets/` and optionally with their accompanied pseudopotential.
 10. Calculate the c6 values using `a4-calculate_c6.sh ion-ion [ion-ion ...]`. Note that these are in bohr^6 * hartree 
 11. Generate and perform fits using `a5-do_fitting.sh ion-ion [ion-ion ...]`. This will perform MB, MB_overTTM, and TTM fits.
-12. Implement each fit into MBX-tmp using `a6-do_implementation`. Manual instructions are located in testMBX/README. In addition to comparing the script's output, you should also verify that all the files within MBX are as expected.
-13. Commit your changes to a temp branch and push to Github
+12. Implement your best_fit TTM and overTTM into MBX using `a6-do_implementation`. Manual instructions are located in testMBX/README. In addition to comparing the script's output, you should also verify that all the files within MBX are as expected.
+13. Implement tests for your potential using `a7-make-tests.sh`.
+14. Commit your changes to a temp branch and push to Github.
+15. Verify that your tests are passing on Github Actions
