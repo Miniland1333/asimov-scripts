@@ -35,5 +35,12 @@ $MBX_HOME/install/bin/tests/test_single_point input.nrg ../mbx.json &>single_poi
 ln -s ../../notebook/config.ini .
 
 # insert into disptools, bucktools, energy2b, and poly-holder-2b
-# ( pairs = {)[\s\S]*?}(};)
 python3 $scriptsDir/n2-implement_tests.py $ionpair
+
+#recompile MBX
+cd "$MBX_HOME"
+module load gcc
+./compile.sh gnudebug
+
+cd "./install/bin/unittests"
+ctest

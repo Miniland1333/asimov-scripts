@@ -12,7 +12,7 @@ with open("single_point_test_overTTM_MBX.txt") as file:
 
 
 def parse_fit_output(input):
-    match = re.search(r" +1 +\d\.\d+e[+-]\d+ +(\d\.\d+e[+-]\d+)", input)  # find calculated value
+    match = re.search(r" +1 +-?\d\.\d+e[+-]\d+ +(-?\d\.\d+e[+-]\d+)", input)  # find calculated value
     return float(match.group(1))
 
 
