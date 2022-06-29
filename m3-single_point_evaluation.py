@@ -29,8 +29,11 @@ print(TTM_MBX)
 print(overTTM)
 print(overTTM_MBX)
 
+epsilon=0.005 # kcal/mol
 TTM_OK = abs(TTM - TTM_MBX) < abs(TTM / 10000)  # less than 0.01% error
+TTM_OK = (TTM_OK) or (abs(TTM - TTM_MBX) < epsilon) # less than 0.05kcal/mol error
 overTTM_OK = abs(overTTM - overTTM_MBX) < abs(overTTM / 10000)
+overTTM_OK = (overTTM_OK) or abs(overTTM - overTTM_MBX) < epsilon # less than 0.05kcal/mol error
 # print (TTM_OK)
 # print (overTTM_OK)
 if TTM_OK and overTTM_OK:
