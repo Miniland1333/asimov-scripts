@@ -3,10 +3,10 @@ import sys
 import json
 import os
 
-dim_settings = "dimer_settings.ini"
+trimer_settings = "trimer_settings.ini"
 config = "config.ini"
 # retrieves ion data from ion-pairs.json
-with open("../../ion-pairs.json", "r") as read_file:
+with open("../../../ion-pairs.json", "r") as read_file:
     pairs = json.load(read_file)
     pair = pairs[sys.argv[1]]
     charges = pair["charges"]
@@ -29,7 +29,7 @@ def chargedMonomerName(index):
     return ionsArray[index] + charge
 
 
-mon_ids = [chargedMonomerName(0), chargedMonomerName(1)]
+mon_ids = [chargedMonomerName(0), chargedMonomerName(1), "h2o"]
 print(mon_ids)
 
 mbnrg_fits_directory = "mb-nrg_fits"
@@ -37,13 +37,15 @@ mbnrg_fits_directory = "mb-nrg_fits"
 MBX_path = "/home/hagnew/software/ion-ion_MBX/MBX-dev"
 
 # print(MBX_path)
-mbfit.generate_MBX_files(dim_settings, config, mon_ids, 0,
-                         do_ttmnrg=True,
-                         MBX_HOME=MBX_path, version="v1")
+# don't need to implement for 3B TTM
+# mbfit.generate_MBX_files(trimer_settings, config, mon_ids, 0,
+#                          do_ttmnrg=True,
+#                          MBX_HOME=MBX_path, version="v1")
 
-mbfit.generate_MBX_files(dim_settings, config, mon_ids, 9,
+mbfit.generate_MBX_files(trimer_settings, config, mon_ids, 4,
                          do_ttmnrg=False, mbnrg_fits_path=mbnrg_fits_directory,
                          MBX_HOME=MBX_path, version="v1")
+sys.exit()
 
 # Check if manual implementation required (due to the file being formatted)
 with open("./MBX_files/MBX_cpp_code.txt") as cpp_code:

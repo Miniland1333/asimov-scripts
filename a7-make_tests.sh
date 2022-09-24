@@ -18,7 +18,8 @@ export scriptsDir
 #recompile MBX
 cd "$MBX_HOME"
 module load gcc
-./compile.sh gnudebug
+./configure --enable-verbose --disable-optimization
+make && make install
 
 # create test files
 echo "creating test files"
@@ -30,7 +31,7 @@ python3 $MBX_HOME/scripts/format_conversion/xyz2nrg.py input.xyz
 
 # running single-point debug output
 echo "Generating debug single_point output for $ionpair"
-$MBX_HOME/install/bin/tests/test_single_point input.nrg ../mbx.json &>single_point.out
+$MBX_HOME/install/bin/single_point input.nrg ../mbx.json &>single_point.out
 
 ln -s ../../notebook/config.ini .
 
@@ -40,7 +41,5 @@ python3 $scriptsDir/n2-implement_tests.py $ionpair
 #recompile MBX
 cd "$MBX_HOME"
 module load gcc
-./compile.sh gnudebug
-
-cd "./install/bin/unittests"
-ctest
+./configure --disable-optimization 
+make check

@@ -16,7 +16,7 @@
        "alpha_ewald_disp" : 0.0, 
        "grid_density_disp" : 2.5,
        "spline_order_disp" : 6,
-       "ttm_pairs" : [["JSON_monomer1_SUBSTITUTION","JSON_monomer2_SUBSTITUTION"]],
+       "ttm_pairs" : [],
        "ignore_2b_poly" : [],
        "ignore_3b_poly" : []
    } ,  
