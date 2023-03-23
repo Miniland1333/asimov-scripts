@@ -19,7 +19,7 @@ export scriptsDir
 cd "$MBX_HOME"
 module load gcc
 ./configure --enable-verbose --disable-optimization
-make && make install
+make -j && make install
 
 # create test files
 echo "creating test files"

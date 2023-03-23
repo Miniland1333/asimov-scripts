@@ -47,6 +47,8 @@ mbfit.generate_MBX_files(trimer_settings, config, mon_ids, 4,
                          MBX_HOME=MBX_path, version="v1")
 sys.exit()
 
+#TODO Re-enable force adding in case the file is formatting
+
 # Check if manual implementation required (due to the file being formatted)
 with open("./MBX_files/MBX_cpp_code.txt") as cpp_code:
     cpp_text = cpp_code.read()

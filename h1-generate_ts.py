@@ -104,4 +104,8 @@ with open(f"../{outfile}",'w') as ts:
 
             if float(d[-5:].lstrip("0")) % 100 == 0:
                 print(d)
+
+
+            with open(f"{d}/reference_energy.dat","w") as energyfile:
+                energyfile.write(f"{be} {e2b}")
 # print(lowestE1, lowestE2)
